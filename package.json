@@ -1,11 +1,11 @@
 {
-  "name": "overreacted",
+  "name": "bukhalo-blog",
   "private": true,
-  "description": "Overreacted",
+  "description": "Bukhalo Blog",
   "version": "1.0.0",
-  "author": "Dan Abramov <dan.abramov@me.com>",
+  "author": "Aleksandr Bukhalo <aleksandr@bukhalo.com>",
   "bugs": {
-    "url": "https://github.com/gaearon/overreacted.io/issues"
+    "url": "https://github.com/bukhalo/blog.bukhalo.com/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -43,7 +43,7 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://overreacted.io",
+  "homepage": "https://blog.bukhalo.com",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
