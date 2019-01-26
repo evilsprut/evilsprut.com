@@ -105,11 +105,11 @@ class BlogPostTemplate extends React.Component {
 
     loadFontsForCode(lang);
     const languageLink = createLanguageLink(slug, lang);
-    const enSlug = languageLink('en');
+    const enSlug = languageLink('ru');
     const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${enSlug.slice(
       1,
       enSlug.length - 1
-    )}/index${lang === 'en' ? '' : '.' + lang}.md`;
+    )}/index${lang === 'ru' ? '' : '.' + lang}.md`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
       `https://blog.bukhalo.com${enSlug}`
     )}`;
