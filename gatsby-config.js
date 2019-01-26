@@ -72,6 +72,7 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
+              console.log(allMarkdownRemark);
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
@@ -101,7 +102,7 @@ module.exports = {
                 allMarkdownRemark(
                   limit: 1000,
                   sort: { order: DESC, fields: [frontmatter___date] }
-                  filter: {fields: { langKey: {eq: "en"}}}
+                  filter: {fields: { langKey: {eq: "ru"}}}
                 ) {
                   edges {
                     node {
