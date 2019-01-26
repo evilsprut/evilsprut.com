@@ -5,7 +5,6 @@
   ],
   "alias": "blog.bukhalo.com",
   "routes": [
-    { "src": "/zh_TW/things-i-dont-know-as-of-2018/", "dest": "/zh-hant/things-i-dont-know-as-of-2018/" },
     {
       "src": "/static/(.*)",
       "dest": "/static/$1",
