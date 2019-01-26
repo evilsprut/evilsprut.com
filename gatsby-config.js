@@ -148,7 +148,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
-        langKeyDefault: 'en',
+        langKeyDefault: 'ru',
         useLangKeyLayout: false,
       },
     },
