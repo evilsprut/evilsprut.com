@@ -1,6 +1,11 @@
+import { pluralize } from 'numeralize-ru';
+
 export function formatReadingTime(minutes) {
+  const minutesPluralized = pluralize(minutes, 'минута', 'минуты', 'минут');
   let cups = Math.round(minutes / 5);
-  return `${new Array(cups || 1).fill('☕️').join('')} ${minutes} min read`;
+  return `${new Array(cups || 1)
+    .fill('⏰')
+    .join('')} ${minutes} ${minutesPluralized}`;
 }
 
 // `lang` is optional and will default to the current user agent locale
