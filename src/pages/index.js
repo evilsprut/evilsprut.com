@@ -8,6 +8,7 @@ import SEO from '../components/SEO';
 import Footer from '../components/Footer';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm } from '../utils/typography';
+import { loadFontsForCode } from '../utils/i18n';
 
 class BlogIndex extends React.Component {
   render() {
@@ -17,8 +18,9 @@ class BlogIndex extends React.Component {
       'props.data.site.siteMetadata.description'
     );
     const posts = get(this, 'props.data.allMarkdownRemark.edges').filter(
-      ({ node }) => node.fields.langKey === 'en'
+      ({ node }) => node.fields.langKey === 'ru'
     );
+    loadFontsForCode('ru');
 
     return (
       <Layout location={this.props.location} title={siteTitle}>

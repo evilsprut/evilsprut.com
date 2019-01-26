@@ -33,7 +33,6 @@ export const codeToLanguage = code =>
 
 export const loadFontsForCode = code => {
   switch (code) {
-    case 'ru':
     case 'bg':
       import('../fonts/fonts-shared.cyrillic.css');
       import('../fonts/fonts-post.cyrillic.css');
@@ -48,6 +47,7 @@ export const loadFontsForCode = code => {
     case 'da':
     case 'de':
     case 'es':
+    case 'en':
     case 'fi':
     case 'fr':
     case 'hu':
@@ -56,6 +56,9 @@ export const loadFontsForCode = code => {
     case 'no':
     case 'pl':
     case 'pt-br':
+    case 'ru':
+      import('../fonts/fonts-shared.cyrillic.css');
+      import('../fonts/fonts-post.cyrillic.css');
     case 'sk':
     case 'sq':
     case 'sv':
@@ -76,5 +79,5 @@ export const createLanguageLink = (slug, lang) => {
   const rawSlug = slug.replace(`${lang}/`, '');
 
   return targetLang =>
-    targetLang === 'en' ? rawSlug : `${targetLang}/${rawSlug}`;
+    targetLang === 'ru' ? rawSlug : `${targetLang}/${rawSlug}`;
 };
