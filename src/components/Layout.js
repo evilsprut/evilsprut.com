@@ -27,21 +27,25 @@ const Container = styled.div`
 
 const Header = styled.div`
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  margin-bottom: ${rhythm(1.5)};
 `;
 
 const HeaderTitle = styled.h1`
   ${scale(0.75)}
-  margin-bottom: ${rhythm(1.5)};
   margin-top: 0;
+  margin-bottom: 0;
 `;
 
 const HeaderTitleInternal = styled.h3`
+  display: flex;
+  align-items: center;
+  height: 42px;
   font-family: Montserrat, sans-serif;
   margin-top: 0;
-  margin-bottom: ${rhythm(-1)};
-  min-height: 3.5rem;
+  margin-bottom: 0;
+  min-height: ${rhythm(1.5)};
 `;
 
 const HeaderLink = styled(gatsbyLink)`
