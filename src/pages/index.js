@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
@@ -9,6 +10,38 @@ import Footer from '../components/Footer';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm } from '../utils/typography';
 import { loadFontsForCode } from '../utils/i18n';
+
+const PostFooter = styled.div`
+  display: flex;
+`;
+
+const Title = styled.h3`
+  font-family: Montserrat, sans-serif;
+  font-size: ${rhythm(1)};
+  margin-bottom: ${rhythm(1 / 4)};
+`;
+
+const Date = styled.div`
+  font-size: 12px;
+`;
+
+const Tags = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+`;
+
+const Tag = styled.div`
+  margin: 0 5px;
+  padding: 0 5px;
+  font-size: 12px;
+  background-color: var(--tag-bg);
+  border-radius: 3px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+`;
 
 class BlogIndex extends React.Component {
   render() {
@@ -30,24 +63,23 @@ class BlogIndex extends React.Component {
           const title = get(node, 'frontmatter.title') || node.fields.slug;
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontSize: rhythm(1),
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+              <Title>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
-              </h3>
-              <small>
-                {formatPostDate(node.frontmatter.date, 'ru')}
-                {` • ${formatReadingTime(node.timeToRead)}`}
-              </small>
+              </Title>
+              <small>{formatReadingTime(node.timeToRead)}</small>
               <p
                 dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
               />
+              <PostFooter>
+                <Date>{formatPostDate(node.frontmatter.date, 'ru')}</Date>
+                <Tags>
+                  {node.frontmatter.tags.map(tag => {
+                    return <Tag key={tag}>{tag}</Tag>;
+                  })}
+                </Tags>
+              </PostFooter>
             </div>
           );
         })}
@@ -79,6 +111,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             spoiler
+            tags
           }
         }
       }
