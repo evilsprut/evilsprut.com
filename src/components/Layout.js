@@ -7,10 +7,6 @@ import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
 
-const rootPath = `${__PATH_PREFIX__}/`;
-const isHomePage = location.pathname === rootPath;
-const topPadding = isHomePage ? rhythm(1.5) : '50px';
-
 const App = styled.div`
   min-height: 100vh;
   color: var(--textNormal);
@@ -22,7 +18,7 @@ const Container = styled.div`
   max-width: ${rhythm(24)};
   margin-left: auto;
   margin-right: auto;
-  padding: ${topPadding} ${rhythm(3 / 4)};
+  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
 `;
 
 const Header = styled.div`
@@ -95,7 +91,7 @@ class Layout extends React.Component {
     }
   }
   render() {
-    const { children, location } = this.props;
+    const { children } = this.props;
     return (
       <App>
         <Container>
