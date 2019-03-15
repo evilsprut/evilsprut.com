@@ -12,6 +12,20 @@ const Right = styled.div`
   float: right;
 `;
 
+const SocialLinks = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const Link = styled.a`
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
 class Footer extends React.Component {
   render() {
     return (
@@ -21,21 +35,50 @@ class Footer extends React.Component {
             rss
           </a>
         </Right>
-        <a
-          href="https://github.com/bukhalo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="https://t.me/bukhalo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          telegram
-        </a>
+        <SocialLinks>
+          <Link
+            href="https://vk.com/bukhalo_a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            vk
+          </Link>
+          <Link
+            href="https://facebook.com/bukhalo.a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            facebook
+          </Link>
+          <Link
+            href="https://instagram.com/bukhalo_a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            instagram
+          </Link>
+          <Link
+            href="https://twitter.com/bukhalo_a"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            twitter
+          </Link>
+          <Link
+            href="https://t.me/bukhalo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            telegram
+          </Link>
+          <Link
+            href="https://github.com/bukhalo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github
+          </Link>
+        </SocialLinks>
       </Container>
     );
   }
