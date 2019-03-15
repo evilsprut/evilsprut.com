@@ -151,5 +151,8 @@ module.exports = {
         useLangKeyLayout: false,
       },
     },
+    {
+      resolve: 'gatsby-plugin-styled-components',
+    },
   ],
 };
