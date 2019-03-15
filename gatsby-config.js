@@ -5,7 +5,7 @@ module.exports = {
     description: 'Personal blog by Aleksandr Bukhalo. Smthng about my life.',
     siteUrl: 'https://blog.bukhalo.com/',
     social: {
-      twitter: '@bukhalo_com',
+      twitter: '@bukhalo_a',
     },
   },
   pathPrefix: '/',
