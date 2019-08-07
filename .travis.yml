@@ -1,15 +1,24 @@
 language: node_js
 
-os:
-  - linux
-  - osx
-
 node_js:
   - "node"
-  - "lts/*"
-  - "7"
-  - "8"
 
-script:
-  - npm install
-  - npm run lint
+stages:
+  # - name: Build
+  - name: Test
+
+jobs:
+  include:
+    # - stage: Build
+    #   script: echo "build"
+
+    # - stage: Test
+    #   name: "Dump test"
+    #   script: echo "dump test"
+
+    - stage: Test
+      name: "Lighthouse"
+      if: type = pull_request
+      script:
+        - LIGHTHOUSE_URL=$(now deploy --token=$NOW_TOKEN)
+        - lighthousebot $LIGHTHOUSE_URL
