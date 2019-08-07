@@ -5268,14 +5268,13 @@ gatsby-plugin-i18n@^0.4.2:
     graphql "^0.11.7"
     ptz-i18n "^0.3.0"
 
-gatsby-plugin-manifest@^2.0.5:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.13.tgz#8ae0a394d65c85516e324bec1c69eaef03fdc5c3"
-  integrity sha512-A61/MOUfcCh1c6+bgGKASBngbO5jX5ktIvjsQwjVX0iJJlZfZNPD90T2B4iABQz7A1Kr475FY6TqqYuouHV7Gw==
+gatsby-plugin-manifest@^2.0.29:
+  version "2.0.29"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.29.tgz#ce83b0ef1aa2d74b9027c3bdb26be2fbd25ef1bc"
+  integrity sha512-zxUuoKxjjdEyj8Xh/svTIOhaIjONB2txel441yJXoYfHmNndysEn+DcYUMkN4xQwZLIaVKoQZ/fCNcVhUOUGIg==
   dependencies:
     "@babel/runtime" "^7.0.0"
-    bluebird "^3.5.0"
-    sharp "^0.21.0"
+    sharp "^0.21.3"
 
 gatsby-plugin-offline@^2.0.5:
   version "2.0.21"
@@ -11089,7 +11088,7 @@ shallowequal@^1.0.1, shallowequal@^1.0.2:
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
-sharp@^0.21.0:
+sharp@^0.21.0, sharp@^0.21.3:
   version "0.21.3"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.21.3.tgz#381937de66c123687f2ac7186f85921c6bb19cdd"
   integrity sha512-5qZk8r+YgfyztLEKkNez20Wynq/Uh1oNyP5T/3gTYwt2lBYGs9iDs5m0yVsZEPm8eVBbAJhS08J1wp/g+Ai1Qw==
