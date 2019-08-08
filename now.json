@@ -1,7 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "public" }
+    }
   ],
   "alias": "blog.bukhalo.com",
   "routes": [
@@ -20,5 +24,8 @@
       "dest": "/$1",
       "headers": { "cache-control": "public, max-age=0, must-revalidate" }
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
