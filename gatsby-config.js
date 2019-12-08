@@ -11,6 +11,9 @@ module.exports = {
   pathPrefix: '/',
   plugins: [
     {
+      resolve: `gatsby-plugin-typescript`,
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
