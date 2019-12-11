@@ -136,9 +136,12 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/assets/icon.png`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
     },
     `gatsby-plugin-react-helmet`,
     {
