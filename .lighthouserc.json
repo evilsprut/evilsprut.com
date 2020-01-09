@@ -7,7 +7,7 @@
         "http://localhost/index.html",
         "http://localhost/404/index.html",
         "http://localhost/sending-custom-events-to-sentry/",
-        "http://localhost/%20i-hate-ios-alarm-clock/"
+        "http://localhost/i-hate-ios-alarm-clock/"
       ]
     },
     "assert": {
