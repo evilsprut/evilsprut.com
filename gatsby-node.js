@@ -6,6 +6,13 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions;
 
+  createRedirect({
+    fromPath: '/%20i-hate-ios-alarm-clock/',
+    toPath: '/i-hate-ios-alarm-clock/',
+    isPermanent: true,
+    redirectInBrowser: true,
+  });
+
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js');
     resolve(

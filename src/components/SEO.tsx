@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 
 const query = graphql`
@@ -19,7 +19,29 @@ const query = graphql`
   }
 `;
 
-function SEO({ meta, image, title, description, slug, lang = 'en' }) {
+export interface Meta {
+  name: string;
+  content: string;
+  hid: string;
+}
+
+export interface ISEOProps {
+  meta: Meta[];
+  image?: string;
+  title: string;
+  description?: string;
+  slug?: string;
+  lang: string;
+}
+
+export const SEO: React.FC<ISEOProps> = ({
+  meta,
+  image,
+  title,
+  description,
+  slug,
+  lang = 'en',
+}: PropTypes.InferProps<typeof SEO.propTypes>) => {
   return (
     <StaticQuery
       query={query}
@@ -93,7 +115,7 @@ function SEO({ meta, image, title, description, slug, lang = 'en' }) {
       }}
     />
   );
-}
+};
 
 SEO.defaultProps = {
   meta: [],

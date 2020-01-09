@@ -2,14 +2,15 @@
   "name": "bukhalo-blog",
   "private": true,
   "description": "Bukhalo Blog",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Aleksandr Bukhalo <aleksandr@bukhalo.com>",
   "bugs": {
     "url": "https://github.com/bukhalo/blog.bukhalo.com/issues"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
-    "@types/node": "^12.12.14",
-    "@types/react-dom": "^16.9.4",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.18.7",
     "gatsby-plugin-feed": "^2.0.8",
@@ -45,6 +46,16 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@types/node": "^12.12.17",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^16.9.16",
+    "@types/react-dom": "^16.9.4",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.1.0",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.1.1",
@@ -62,7 +73,9 @@
     "build": "rm -rf public && rm -rf .cache && gatsby build",
     "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) overreacted.io",
     "now-build": "yarn build",
-    "dry": "yarn build && cp now.json public/ && cd public && now"
+    "dry": "yarn build && cp now.json public/ && cd public && now",
+    "storybook": "NODE_ENV=production start-storybook -s public",
+    "build-storybook": "NODE_ENV=production  build-storybook -s public"
   },
   "husky": {
     "hooks": {
