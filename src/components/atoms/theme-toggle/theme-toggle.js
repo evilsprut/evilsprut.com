@@ -4,7 +4,7 @@
  * + applied https://github.com/aaronshaf/react-toggle/pull/90
  **/
 
-import './Toggle.css';
+import './theme-toggle.styles.css';
 
 import React, { PureComponent } from 'react';
 
@@ -28,7 +28,7 @@ function pointerCoord(event) {
   return { x: 0, y: 0 };
 }
 
-export default class Toggle extends PureComponent {
+export default class ThemeToggle extends PureComponent {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -148,7 +148,7 @@ export default class Toggle extends PureComponent {
       return null;
     }
     return icons[type] === undefined
-      ? Toggle.defaultProps.icons[type]
+      ? ThemeToggle.defaultProps.icons[type]
       : icons[type];
   }
 

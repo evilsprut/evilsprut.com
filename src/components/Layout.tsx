@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import styled from 'styled-components';
 import { Link as gatsbyLink } from 'gatsby';
-import Toggle from './Toggle';
-
+import ThemeToggle from './atoms/theme-toggle/theme-toggle';
+import { ThemeToggleIcon } from './atoms/theme-toggle-icon/theme-toggle-icon';
 import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
@@ -56,13 +56,7 @@ const HeaderLinkInternal = styled(gatsbyLink)`
   box-shadow: none;
 `;
 
-const ThemeToggleImg = styled.img`
-  width: 16px;
-  height: 16px;
-  pointer-events: none;
-`;
-
-class Layout extends React.Component {
+export class Layout extends React.Component {
   state = {
     theme: null,
   };
@@ -98,10 +92,10 @@ class Layout extends React.Component {
           <Header>
             {this.renderHeader()}
             {this.state.theme !== null ? (
-              <Toggle
+              <ThemeToggle
                 icons={{
-                  checked: <ThemeToggleImg src={moon} role="presentation" />,
-                  unchecked: <ThemeToggleImg src={sun} role="presentation" />,
+                  checked: <ThemeToggleIcon src={moon} role="presentation" />,
+                  unchecked: <ThemeToggleIcon src={sun} role="presentation" />,
                 }}
                 checked={this.state.theme === 'dark'}
                 onChange={e =>

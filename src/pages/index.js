@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import get from 'lodash/get';
 
-import Bio from '../components/Bio';
+import Bio from '../components/organisms/bio/bio';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
-import Footer from '../components/Footer';
+import Footer from '../components/organisms/footer/footer';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm } from '../utils/typography';
 import { loadFontsForCode } from '../utils/i18n';
