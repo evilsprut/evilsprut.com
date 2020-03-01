@@ -3,10 +3,7 @@ import styled from 'styled-components';
 
 import { rhythm } from '../../../utils/typography';
 
-const Container = styled.footer`
-  margin-top: ${rhythm(2.5)};
-  padding-top: ${rhythm(1)};
-`;
+const Container = styled.footer``;
 
 const Right = styled.div`
   float: right;
@@ -20,6 +17,8 @@ const SocialLinks = styled.div`
 
 const Link = styled.a`
   margin-right: 10px;
+  font-family: Montserrat, sans-serif;
+  font-size: ${rhythm(1/2)};
 
   &:last-child {
     margin-right: 0;
@@ -30,9 +29,9 @@ export const Footer: React.FC = () => {
   return (
     <Container>
       <Right>
-        <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
+        <Link href="/rss.xml" target="_blank" rel="noopener noreferrer">
           rss
-        </a>
+        </Link>
       </Right>
       <SocialLinks>
         <Link
