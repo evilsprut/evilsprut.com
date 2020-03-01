@@ -2,7 +2,7 @@
   "name": "bukhalo-blog",
   "private": true,
   "description": "Bukhalo Blog",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "author": "Aleksandr Bukhalo <aleksandr@bukhalo.com>",
   "bugs": {
     "url": "https://github.com/bukhalo/blog.bukhalo.com/issues"
