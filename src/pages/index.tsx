@@ -10,6 +10,7 @@ import Footer from '../components/organisms/footer/footer';
 import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm } from '../utils/typography';
 import { loadFontsForCode } from '../utils/i18n';
+import { About } from '../components/organisms/about/about';
 
 const PostFooter = styled.div`
   display: flex;
@@ -43,6 +44,10 @@ const Tag = styled.div`
   }
 `;
 
+const Padder = styled.div`
+  margin-bottom: 8rem;
+`;
+
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
@@ -50,39 +55,15 @@ class BlogIndex extends React.Component {
       this,
       'props.data.site.siteMetadata.description'
     );
-    const posts = get(this, 'props.data.allMarkdownRemark.edges').filter(
-      ({ node }) => node.fields.langKey === 'ru'
-    );
     loadFontsForCode('ru');
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug;
-          return (
-            <div key={node.fields.slug}>
-              <Title>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </Title>
-              <small>{formatReadingTime(node.timeToRead)}</small>
-              <p
-                dangerouslySetInnerHTML={{ __html: node.frontmatter.spoiler }}
-              />
-              <PostFooter>
-                <Date>{formatPostDate(node.frontmatter.date, 'ru')}</Date>
-                <Tags>
-                  {node.frontmatter.tags.map(tag => {
-                    return <Tag key={tag}>{tag}</Tag>;
-                  })}
-                </Tags>
-              </PostFooter>
-            </div>
-          );
-        })}
+        <Bio></Bio>
+        <Padder>
+        <About></About>
+        </Padder>
         <Footer />
       </Layout>
     );
@@ -97,23 +78,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         description
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          fields {
-            slug
-            langKey
-          }
-          timeToRead
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            spoiler
-            tags
-          }
-        }
       }
     }
   }
