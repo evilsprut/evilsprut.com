@@ -59,7 +59,7 @@
     "eslint": "6.8.0",
     "eslint-plugin-react": "7.18.3",
     "gh-pages": "2.2.0",
-    "now": "16.7.3",
+    "now": "17.0.4",
     "prettier": "1.19.1"
   },
   "homepage": "https://bukhalo.com",
