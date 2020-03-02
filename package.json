@@ -71,9 +71,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
-    "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) overreacted.io",
-    "now-build": "yarn build",
-    "dry": "yarn build && cp now.json public/ && cd public && now",
+    "deploy": "npm run build && cp now.json public/ && cd public && now alias $(now) overreacted.io",
+    "now-build": "npm run build",
+    "dry": "npm run build && cp now.json public/ && cd public && now",
     "storybook": "NODE_ENV=production start-storybook -s public",
     "build-storybook": "NODE_ENV=production  build-storybook -s public"
   },
@@ -84,7 +84,7 @@
   },
   "lint-staged": {
     "{gatsby-*.js,src/**/*.{js,jsx,json,css}}": [
-      "yarn format",
+      "npm run format",
       "git add"
     ]
   }
