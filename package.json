@@ -1,11 +1,11 @@
 {
-  "name": "bukhalo-blog",
+  "name": "@bukhalo/bukhalo.com",
   "private": true,
-  "description": "Bukhalo Blog",
+  "description": "My personal site",
   "version": "1.1.0",
   "author": "Aleksandr Bukhalo <aleksandr@bukhalo.com>",
   "bugs": {
-    "url": "https://github.com/bukhalo/blog.bukhalo.com/issues"
+    "url": "https://github.com/bukhalo/bukhalo.com/issues"
   },
   "engines": {
     "node": "12.x"
@@ -62,18 +62,18 @@
     "now": "^16.7.3",
     "prettier": "^1.18.2"
   },
-  "homepage": "https://blog.bukhalo.com",
+  "homepage": "https://bukhalo.com",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,json,css}}'",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx --ignore-pattern public .",
+    "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,.ts,.tsx,json,css}}'",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "rm -rf public && rm -rf .cache && gatsby build",
-    "deploy": "yarn build && cp now.json public/ && cd public && now alias $(now) overreacted.io",
-    "now-build": "yarn build",
-    "dry": "yarn build && cp now.json public/ && cd public && now",
+    "deploy": "npm run build && cp now.json public/ && cd public && now alias $(now) bukhalo.com",
+    "now-build": "npm run build",
+    "dry": "npm run build && cp now.json public/ && cd public && now",
     "storybook": "NODE_ENV=production start-storybook -s public",
     "build-storybook": "NODE_ENV=production  build-storybook -s public"
   },
@@ -84,7 +84,7 @@
   },
   "lint-staged": {
     "{gatsby-*.js,src/**/*.{js,jsx,json,css}}": [
-      "yarn format",
+      "npm run format",
       "git add"
     ]
   }
