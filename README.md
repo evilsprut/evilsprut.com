@@ -1,7 +1,9 @@
-# [blog.bukhalo.com](https://blog.bukhalo.com/)
+# [bukhalo.com](https://bukhalo.com/)
+🏠Personal website by Aleksandr Bukhalo
 
-[![Build Status](https://travis-ci.com/bukhalo/blog.bukhalo.com.svg?branch=master)](https://travis-ci.com/bukhalo/blog.bukhalo.com)
+## Licenses
+All website source code is distributed under the MIT license.
 
-My personal blog. Forked from [overreacted.io](https://github.com/gaearon/overreacted.io). 
+All articles in the blog section are licensed under CC-BY-SA-4.0 license.
 
-To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.
+Repository originally forked from [overreacted.io](https://github.com/gaearon/overreacted.io).
