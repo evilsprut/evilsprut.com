@@ -60,7 +60,7 @@
     "eslint-plugin-react": "7.19.0",
     "gh-pages": "2.2.0",
     "now": "17.0.4",
-    "prettier": "2.0.1"
+    "prettier": "2.0.5"
   },
   "homepage": "https://bukhalo.com",
   "license": "MIT",
