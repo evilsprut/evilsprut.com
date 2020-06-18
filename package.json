@@ -2,7 +2,7 @@
   "name": "@bukhalo/bukhalo.com",
   "private": true,
   "description": "🏠Personal website by Aleksandr Bukhalo",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Aleksandr Bukhalo <a@bukhalo.com>",
   "bugs": {
     "url": "https://github.com/bukhalo/bukhalo.com/issues"
@@ -14,7 +14,7 @@
     "babel-plugin-styled-components": "1.10.7",
     "gatsby": "2.20.2",
     "gatsby-plugin-feed": "2.4.0",
-    "gatsby-plugin-google-analytics": "2.2.0",
+    "gatsby-plugin-google-analytics": "^2.2.0",
     "gatsby-plugin-i18n": "1.0.1",
     "gatsby-plugin-manifest": "2.3.1",
     "gatsby-plugin-offline": "3.1.0",
