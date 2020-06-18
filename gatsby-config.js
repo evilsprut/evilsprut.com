@@ -51,12 +51,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `UA-130227707-1`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-169916201-1`,
+        head: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -75,11 +76,12 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.bukhalo.com. You can read it online by <a href="${siteUrl +
-                  edge.node.fields.slug}">clicking here</a>.)</div>
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at blog.bukhalo.com. You can read it online by <a href="${
+                  siteUrl + edge.node.fields.slug
+                }">clicking here</a>.)</div>
               `;
 
                 let html = edge.node.html;
@@ -110,8 +112,8 @@ module.exports = {
                     node {
                       excerpt(pruneLength: 250)
                       html
-                      fields { 
-                        slug   
+                      fields {
+                        slug
                       }
                       frontmatter {
                         title
