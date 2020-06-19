@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors);
           reject(result.errors);
@@ -93,7 +93,7 @@ exports.createPages = ({ graphql, actions }) => {
           const otherLangPosts = posts.filter(
             ({ node }) => node.fields.langKey !== 'ru'
           );
-          _.each(otherLangPosts, post => {
+          _.each(otherLangPosts, (post) => {
             const translations =
               translationsByDirectory[_.get(post, 'node.fields.directoryName')];
 

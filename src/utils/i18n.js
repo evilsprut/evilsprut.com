@@ -8,7 +8,7 @@
 // https://discuss.httparchive.org/t/what-are-the-invalid-uses-of-the-lang-attribute/1022
 
 // Please keep keys lowercase!
-export const codeToLanguage = code =>
+export const codeToLanguage = (code) =>
   ({
     en: 'English',
     ru: 'Русский',
@@ -31,7 +31,7 @@ export const codeToLanguage = code =>
     sk: 'Slovenčina',
   }[code].replace(/ /g, ' ' /* nbsp */));
 
-export const loadFontsForCode = code => {
+export const loadFontsForCode = (code) => {
   switch (code) {
     case 'bg':
       import('../fonts/fonts-shared.cyrillic.css');
@@ -78,6 +78,6 @@ export const loadFontsForCode = code => {
 export const createLanguageLink = (slug, lang) => {
   const rawSlug = slug.replace(`${lang}/`, '');
 
-  return targetLang =>
+  return (targetLang) =>
     targetLang === 'ru' ? rawSlug : `${targetLang}/${rawSlug}`;
 };
