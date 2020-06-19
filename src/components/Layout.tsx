@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { rhythm } from '../utils/typography';
-import { Header } from '../components/organisms/header/header'
+import { Header } from '../components/organisms/header/header';
+import firebase from 'gatsby-plugin-firebase';
 
 const App = styled.div`
   min-height: 100vh;
@@ -20,17 +21,19 @@ const Container = styled.div`
 type LayoutProps = {
   location: {};
   title: string;
-}
+};
 
 const Layout: React.FC<LayoutProps> = ({ children, location, title }) => {
   const [theme, setTheme] = useState(null);
 
   useEffect(() => {
+    firebase.analytics();
+    firebase.performance();
     setTheme(window.__theme);
     window.__onThemeChange = () => {
       setTheme(window.__theme);
     };
-  })
+  });
 
   return (
     <App>
@@ -40,6 +43,6 @@ const Layout: React.FC<LayoutProps> = ({ children, location, title }) => {
       </Container>
     </App>
   );
-}
+};
 
 export default Layout;

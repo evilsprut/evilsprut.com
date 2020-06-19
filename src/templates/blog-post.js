@@ -13,9 +13,6 @@ import {
   createLanguageLink,
   loadFontsForCode,
 } from '../utils/i18n';
-import firebase from 'gatsby-plugin-firebase';
-firebase.analytics();
-firebase.performance();
 
 const GITHUB_USERNAME = 'bukhalo';
 const GITHUB_REPO_NAME = 'blog.bukhalo.com';
