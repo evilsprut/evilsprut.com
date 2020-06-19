@@ -11,6 +11,9 @@ import { formatPostDate, formatReadingTime } from '../utils/helpers';
 import { rhythm } from '../utils/typography';
 import { loadFontsForCode } from '../utils/i18n';
 import { About } from '../components/organisms/about/about';
+import firebase from 'gatsby-plugin-firebase';
+firebase.analytics();
+firebase.performance();
 
 const PostFooter = styled.div`
   display: flex;

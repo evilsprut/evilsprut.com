@@ -181,7 +181,7 @@ export default class ThemeToggle extends PureComponent {
 
         <input
           {...inputProps}
-          ref={ref => {
+          ref={(ref) => {
             this.input = ref;
           }}
           onFocus={this.handleFocus}

@@ -13,6 +13,9 @@ import {
   createLanguageLink,
   loadFontsForCode,
 } from '../utils/i18n';
+import firebase from 'gatsby-plugin-firebase';
+firebase.analytics();
+firebase.performance();
 
 const GITHUB_USERNAME = 'bukhalo';
 const GITHUB_REPO_NAME = 'blog.bukhalo.com';
@@ -24,7 +27,7 @@ class Translations extends React.Component {
   render() {
     let { translations, lang, languageLink, editUrl } = this.props;
 
-    let readerTranslations = translations.filter(lang => lang !== 'ru');
+    let readerTranslations = translations.filter((lang) => lang !== 'ru');
     let hasRussianTranslation = translations.indexOf('ru') !== -1;
 
     return (
