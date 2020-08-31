@@ -35,7 +35,7 @@
     "gatsby-transformer-sharp": "2.5.14",
     "husky": "4.2.3",
     "lint-staged": "10.2.13",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "numeralize-ru": "1.0.1",
     "prismjs": "1.21.0",
     "react": "16.13.1",
