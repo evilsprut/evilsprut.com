@@ -23,10 +23,10 @@ const Title = styled.p`
 export const Bio: React.FC = () => {
   return (
     <Box>
-      <Avatar src={profilePic} alt={`Aleksandr Bukhalo`} />
+      <Avatar src={profilePic} alt="evilsprut" />
       <Title>
         Personal blog by{' '}
-        <a target="_blank" href="https://t.me/bukhalo">
+        <a target="_blank" href="https://t.me/evilsprut">
           Aleksandr Bukhalo
         </a>
         . Smthng&nbsp;about my life

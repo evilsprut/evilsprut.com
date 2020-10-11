@@ -18,7 +18,7 @@ const SocialLinks = styled.div`
 const Link = styled.a`
   margin-right: 10px;
   font-family: Montserrat, sans-serif;
-  font-size: ${rhythm(1/2)};
+  font-size: ${rhythm(1 / 2)};
 
   &:last-child {
     margin-right: 0;
@@ -35,46 +35,25 @@ export const Footer: React.FC = () => {
       </Right>
       <SocialLinks>
         <Link
-          href="https://vk.com/bukhalo_a"
+          href="https://github.com/evilsprut"
           target="_blank"
           rel="noopener noreferrer"
         >
-          vk
+          github
         </Link>
         <Link
-          href="https://facebook.com/bukhalo.a"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          facebook
-        </Link>
-        <Link
-          href="https://instagram.com/bukhalo_a"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          instagram
-        </Link>
-        <Link
-          href="https://twitter.com/bukhalo_a"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          twitter
-        </Link>
-        <Link
-          href="https://t.me/bukhalo"
+          href="https://t.me/evilsprut"
           target="_blank"
           rel="noopener noreferrer"
         >
           telegram
         </Link>
         <Link
-          href="https://github.com/bukhalo"
+          href="https://twitter.com/evilsprut"
           target="_blank"
           rel="noopener noreferrer"
         >
-          github
+          twitter
         </Link>
       </SocialLinks>
     </Container>

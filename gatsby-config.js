@@ -2,13 +2,13 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: 'Aleksandr Bukhalo',
+    title: 'evilsprut',
     author: 'Aleksandr Bukhalo',
     description:
       "I scare people with technology. Writing about things that annoy me. I work as a JavaScript / TypeScript developer. I'm doomed to suffer in search of myself.",
-    siteUrl: 'https://blog.bukhalo.com/',
+    siteUrl: 'https://evilsprut.com/',
     social: {
-      twitter: '@bukhalo_a',
+      twitter: '@evilsprut',
     },
   },
   pathPrefix: '/',
@@ -146,7 +146,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: 'Aleksandr Bukhalo Blog RSS Feed',
+            title: 'evilsprut.com RSS Feed',
           },
         ],
       },

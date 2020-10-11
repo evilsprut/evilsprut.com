@@ -1,11 +1,11 @@
 {
-  "name": "@bukhalo/bukhalo.com",
+  "name": "@evilsprut/evilsprut.com",
   "private": true,
-  "description": "🏠Personal website by Aleksandr Bukhalo",
+  "description": "🏠 Personal website by Aleksandr Bukhalo",
   "version": "1.3.0",
-  "author": "Aleksandr Bukhalo <a@bukhalo.com>",
+  "author": "Aleksandr Bukhalo <hey@evilsprut.com>",
   "bugs": {
-    "url": "https://github.com/bukhalo/bukhalo.com/issues"
+    "url": "https://github.com/evilsprut/evilsprut.com/issues"
   },
   "engines": {
     "node": "12.x"

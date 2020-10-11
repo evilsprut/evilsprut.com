@@ -26,7 +26,7 @@ export const Navigation: React.FC = () => {
         <NavigationLink to="/">Home</NavigationLink>
       </ListItem>
       <ListItem>
-        <NavigationLink to="/blog">Blog</NavigationLink>
+        <NavigationLink to="/blog">Blog <sup>RU</sup></NavigationLink>
       </ListItem>
     </List>
   );

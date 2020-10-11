@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: 'daily'
     reviewers:
-      - 'bukhalo'
+      - 'evilsprut'
     assignees:
-      - 'bukhalo'
+      - 'evilsprut'
     open-pull-requests-limit: 5

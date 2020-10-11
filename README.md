@@ -1,5 +1,5 @@
-# [bukhalo.com](https://bukhalo.com/)
-🏠Personal website by Aleksandr Bukhalo
+# [evilsprut.com](https://evilsprut.com/)
+🏠 My personal website
 
 ## Licenses
 All website source code is distributed under the MIT license.

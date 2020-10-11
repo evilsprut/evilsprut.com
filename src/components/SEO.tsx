@@ -59,7 +59,7 @@ export const SEO: React.FC<ISEOProps> = ({
                   title,
                 }
               : {
-                  title: `${siteMetadata.title} — A blog by Aleksandr Bukhalo`,
+                  title: `${siteMetadata.title} — evilsprut`,
                 })}
             meta={[
               {

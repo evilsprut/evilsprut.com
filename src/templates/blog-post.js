@@ -14,8 +14,8 @@ import {
   loadFontsForCode,
 } from '../utils/i18n';
 
-const GITHUB_USERNAME = 'bukhalo';
-const GITHUB_REPO_NAME = 'blog.bukhalo.com';
+const GITHUB_USERNAME = 'evilsprut';
+const GITHUB_REPO_NAME = 'evilsprut.com';
 const systemFont = `system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif`;
@@ -110,7 +110,7 @@ class BlogPostTemplate extends React.Component {
       enSlug.length - 1
     )}/index${lang === 'ru' ? '' : '.' + lang}.md`;
     const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://blog.bukhalo.com${enSlug}`
+      `https://evilsprut.com${enSlug}`
     )}`;
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -169,7 +169,7 @@ class BlogPostTemplate extends React.Component {
             }}
             to={'/'}
           >
-            Bukhalo Blog
+            evilsprut
           </Link>
         </h3>
         <Bio />
