@@ -14,7 +14,7 @@
     "babel-plugin-styled-components": "1.11.1",
     "firebase": "^7.23.0",
     "gatsby": "2.24.73",
-    "gatsby-plugin-feed": "2.5.12",
+    "gatsby-plugin-feed": "2.9.0",
     "gatsby-plugin-firebase": "^0.2.0-beta.4",
     "gatsby-plugin-i18n": "1.0.1",
     "gatsby-plugin-manifest": "2.4.28",
